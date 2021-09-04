@@ -1,0 +1,15 @@
+{
+    "name": "HR Referral Application",
+    "author": "Yashu",
+    "summary": "HR helper ",
+    "description": "This application is helpful for all hr to keep there record and save hr's time and reduce there work",
+    "website": "https://www.hr.com/referral/application",
+    "category": "Business",
+    "version": "14.0.1.0.0",
+    "depends": ["base", "hr", "hr_recruitment"],
+    "data": ["security/ir.model.access.csv", "views/track_order_view.xml"],
+    "application": True,
+    "auto_install": False,
+    "installable": True,
+    "sequence": "1",
+}
