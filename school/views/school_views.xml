@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<record id="school_profile_list_view" model="ir.ui.view">
+		<field name="name">school.profile.list.view</field>
+		<field name="model">school.profile</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="sname"/>
+				<field name="semail"/>
+				<field name="sphone"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="school_profile_form_view" model="ir.ui.view">
+		<field name="name">school_profile.form.view</field>
+		<field name="model">school.profile</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<group>
+						<field name="sname"/>
+						<field name="semail"/>
+						<field name="sphone"/>
+					</group>
+				</group>
+			</form>
+		</field>
+	</record>
+
+<!--	<record id="search_school_view" model="ir.ui.view">-->
+<!--		<field name="name">school profile search view</field>-->
+<!--		<field name="model">school.profile</field>-->
+<!--		<field name="arch" type="xml">-->
+<!--			<search>-->
+<!--				<field name="sname" string="nam" filter_domain="[('sname','ilike',self)]"/>-->
+<!--				<field name="sname" string="ema"/>-->
+<!--			</search>-->
+<!--		</field>-->
+<!--	</record>-->
+	<record id="action_school_profile" model="ir.actions.act_window">
+		<field name="name">School Profile</field>
+		<field name="res_model">school.profile</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="school_root_menu" name="School"/>
+	<menuitem id="school_sub_menu" parent="school_root_menu"/>
+	<menuitem id="school_profile_menu" action="action_school_profile" parent="school_sub_menu"/>
+
+
+	<!--     <menuitem id="school_root" name="School"/>-->
+	<!--    <menuitem id="school_nav" name="School Teacher" parent="school_root" action="action_school_teacher"/>-->
+
+	<!--    <menuitem id="school_nav" name="School Teacher" parent="school_root"-->
+	<!--              action="action_school_teacher" sequence="2"/>-->
+
+
+</odoo>
+
+
+
+
+
+

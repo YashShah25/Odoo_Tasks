@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<record id="collage_profile_list_view_inherit" model="ir.ui.view">
+		<field name="name">collage.list.view</field>
+		<field name="model">collage.profile</field>
+		<field name="inherit_id" ref="collage.collage_profile_list_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="after">
+
+				<field name="order_name"/>
+				<field name="order_id"/>
+
+
+			</xpath>
+
+		</field>
+	</record>
+
+	<record id="collage_profile_form_view_inherit" model="ir.ui.view">
+		<field name="name">collage.list.view</field>
+
+		<field name="model">collage.profile</field>
+		<field name="inherit_id" ref="collage.collage_profile_form_view"/>
+		<field name="arch" type="xml">
+			<group>
+				<xpath expr="//field[@name='name']" position="after">
+					<group>
+						<group>
+							<field name="order_name"/>
+							<field name="order_id"/>
+						</group>
+					</group>
+
+				</xpath>
+			</group>
+		</field>
+	</record>
+</odoo>
