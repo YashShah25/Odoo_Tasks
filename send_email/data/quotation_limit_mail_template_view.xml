@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+        <record id="product_mail_template" model="mail.template">
+            <field name="name">product info mail template</field>
+            <field name="model_id" ref="send_email.model_product_product"/>
+            <field name="email_from">yashu@gmail.com</field>
+            <!--            <field name="email_from">${object.user_id.email_formatted | safe}</field>-->
+            <field name="subject">Product Info</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; border:1px solid black;">
+                    <h1>yooooo</h1>
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        helloooooo
+                    </p>
+                    <!--                    <p style="margin: 0px; padding: 0px; font-size: 13px;">-->
+                    <!--                        Hello ${object.email},-->
+                    <!--                        <br/>-->
+                    <!--                        <br/>-->
+                    <!--                        This is to notify you that your <span>${ctx['message']}</span> limit has exceed for the ${object.name}.-->
+                    <!--                        <br/>-->
+                    <!--                        <br/>-->
+                    <!--                        <ul>-->
+                    <!--                            <li>-->
+                    <!--                                <b>Customer Name - </b><span>${object.name}</span>-->
+                    <!--                            </li>-->
+                    <!--                            <li>-->
+                    <!--                                <b>Limit for Customer -</b><span>${ctx['exceeding_amount']}</span>-->
+                    <!--                            </li>-->
+                    <!--                        </ul>-->
+                    <!--                        Regards-->
+                    <!--                        <br/>-->
+                    <!--                        Aktiv Software-->
+                    <!--                    </p>-->
+                </div>
+            </field>
+        </record>
+    </data>
+
+</odoo>

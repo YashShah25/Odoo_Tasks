@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_form" model="ir.ui.view">
+        <field name="name">product view inherited</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button id="Senf_by_email" name="action_product_send" string="Send by email"
+                        type="object"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
